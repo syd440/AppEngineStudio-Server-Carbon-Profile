@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description/>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_312603_server_0.SCP Locations Monitored</name>
+        <read_roles/>
+        <suffix>SCP Locations Monitored</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-02 18:07:45</sys_created_on>
+        <sys_id>3014df048707f4108e42caaf8bbb3503</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>x_312603_server_0.SCP Locations Monitored</sys_name>
+        <sys_package display_value="Server Carbon Profile" source="x_312603_server_0">3fef618c8787b4108e42caaf8bbb35d9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Server Carbon Profile">3fef618c8787b4108e42caaf8bbb35d9</sys_scope>
+        <sys_update_name>sys_properties_3014df048707f4108e42caaf8bbb3503</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-02 18:17:37</sys_updated_on>
+        <type>string</type>
+        <value>location=38ab2bb5db5c33005daef4eabf96197c^ORlocation=108752c8c611227501d4ab0e392ba97f</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=3014df048707f4108e42caaf8bbb3503"/>
+</record_update>
