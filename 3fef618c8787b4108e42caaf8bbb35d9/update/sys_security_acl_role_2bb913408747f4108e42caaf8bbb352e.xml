@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2021-10-02 18:31:36</sys_created_on>
+        <sys_id>2bb913408747f4108e42caaf8bbb352e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>56b99f008747f4108e42caaf8bbb357a.snc_internal</sys_name>
+        <sys_package display_value="Server Carbon Profile" source="x_312603_server_0">3fef618c8787b4108e42caaf8bbb35d9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Server Carbon Profile">3fef618c8787b4108e42caaf8bbb35d9</sys_scope>
+        <sys_security_acl display_value="56b99f008747f4108e42caaf8bbb357a">aab99f005747f410136db8d58535e7a5</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_2bb913408747f4108e42caaf8bbb352e</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2021-10-02 18:31:36</sys_updated_on>
+        <sys_user_role display_value="snc_internal" name="snc_internal">7fcaa702933002009c8579b4f47ffbde</sys_user_role>
+        <transaction_id>a0b9db008747f4108e42caaf8bbb35d5</transaction_id>
+    </sys_security_acl_role>
+</record_update>

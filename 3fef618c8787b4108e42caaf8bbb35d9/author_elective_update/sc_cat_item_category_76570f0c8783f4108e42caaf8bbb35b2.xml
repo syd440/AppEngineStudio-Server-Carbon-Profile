@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="DELETE">
+        <sc_cat_item display_value="Update PUE details">93c50f488783f4108e42caaf8bbb35ca</sc_cat_item>
+        <sc_category display_value="End User Computing Services ">368d9bd2db323b402da184eb0b961977</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-02 17:11:17</sys_created_on>
+        <sys_id>76570f0c8783f4108e42caaf8bbb35b2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>End User Computing Services .Update PUE details</sys_name>
+        <sys_package display_value="Server Carbon Profile" source="x_312603_server_0">3fef618c8787b4108e42caaf8bbb35d9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Server Carbon Profile">3fef618c8787b4108e42caaf8bbb35d9</sys_scope>
+        <sys_update_name>sc_cat_item_category_76570f0c8783f4108e42caaf8bbb35b2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-02 17:11:17</sys_updated_on>
+    </sc_cat_item_category>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Server Carbon Profile">3fef618c8787b4108e42caaf8bbb35d9</application>
+        <file_path/>
+        <instance_id>42d3ebe2dbecd3c06578f22ebf9619d3</instance_id>
+        <instance_name>dev51335</instance_name>
+        <name>sc_cat_item_category_76570f0c8783f4108e42caaf8bbb35b2</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category"><sc_cat_item_category action="INSERT_OR_UPDATE"><sc_cat_item display_value="Update PUE details">93c50f488783f4108e42caaf8bbb35ca</sc_cat_item><sc_category display_value="End User Computing Services ">368d9bd2db323b402da184eb0b961977</sc_category><sys_class_name>sc_cat_item_category</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-10-02 17:11:17</sys_created_on><sys_id>76570f0c8783f4108e42caaf8bbb35b2</sys_id><sys_mod_count>0</sys_mod_count><sys_name>End User Computing Services .Update PUE details</sys_name><sys_package display_value="Server Carbon Profile" source="x_312603_server_0">3fef618c8787b4108e42caaf8bbb35d9</sys_package><sys_policy/><sys_scope display_value="Server Carbon Profile">3fef618c8787b4108e42caaf8bbb35d9</sys_scope><sys_update_name>sc_cat_item_category_76570f0c8783f4108e42caaf8bbb35b2</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-10-02 17:11:17</sys_updated_on></sc_cat_item_category></record_update>]]></payload>
+        <payload_hash>-1927239671</payload_hash>
+        <record_name>End User Computing Services .Update PUE details</record_name>
+        <reverted_from/>
+        <source>88ff618c8787b4108e42caaf8bbb35dc</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-02 17:11:17</sys_created_on>
+        <sys_id>36570f0c8783f4108e42caaf8bbb35be</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17c41fd14ed0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-02 17:11:17</sys_updated_on>
+        <type>Catalog Item Category</type>
+        <update_guid>7a570f0ca783f4102016a5c42c205abd</update_guid>
+        <update_guid_history>7a570f0ca783f4102016a5c42c205abd:-1927239671</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="End User Computing Services .Update PUE details">358997008747f4108e42caaf8bbb3555</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-02 18:30:40</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item_category">sc_cat_item_category</sys_db_object>
+        <sys_id>8c24bbb3131a40b4aecd75e25684b8f1</sys_id>
+        <sys_metadata>76570f0c8783f4108e42caaf8bbb35b2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>End User Computing Services .Update PUE details</sys_name>
+        <sys_package display_value="Server Carbon Profile" source="x_312603_server_0">3fef618c8787b4108e42caaf8bbb35d9</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Server Carbon Profile">3fef618c8787b4108e42caaf8bbb35d9</sys_scope>
+        <sys_scope_delete display_value="">216d176646f345189b96d22dbc8b5e40</sys_scope_delete>
+        <sys_update_name>sc_cat_item_category_76570f0c8783f4108e42caaf8bbb35b2</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_category_76570f0c8783f4108e42caaf8bbb35b2">36570f0c8783f4108e42caaf8bbb35be</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-02 18:30:40</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="PUE Data" max_length="40" name="x_312603_server_0_pue_data" type="collection">
+        <element label="PUE" max_length="40" name="pue" type="float"/>
+        <element display="true" label="Site Name" max_length="32" name="site_name" reference="cmn_location" type="reference"/>
+        <index name="index">
+            <element name="site_name"/>
+        </index>
+    </element>
+</database>

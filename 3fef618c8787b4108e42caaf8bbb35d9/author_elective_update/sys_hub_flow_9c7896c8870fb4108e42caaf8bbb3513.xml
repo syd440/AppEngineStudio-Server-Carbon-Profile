@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from>9a41b6c2ff12101088e94ee9453bf1a4</copied_from>
+        <copied_from_name>FlowTemplate_Empty</copied_from_name>
+        <description/>
+        <internal_name>calculate_carbon_profile</internal_name>
+        <label_cache>[{"name":"92bb842b-1684-418e-97c0-6ccd39a8e31f.__dont_treat_as_error__","label":"1➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"92bb842b-1684-418e-97c0-6ccd39a8e31f.__action_status__","label":"1➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"92bb842b-1684-418e-97c0-6ccd39a8e31f.Count","label":"1➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"92bb842b-1684-418e-97c0-6ccd39a8e31f.Table","label":"1➛Server Table","reference":"cmdb_ci_server","reference_display":"Server Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"92bb842b-1684-418e-97c0-6ccd39a8e31f.Records","label":"1➛Server Records","reference":"cmdb_ci_server","reference_display":"Server Records","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"flow_variable.sitename","label":"Flow Variables➛SiteName","reference":"","reference_display":"","type":"string","base_type":"string","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"30ef4d0f-1338-4e4b-ad4f-754ab076f267"}},{"name":"c7a7f021-fb72-40b8-841c-8a9410ee8c64.__dont_treat_as_error__","label":"1➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true"}},{"name":"c7a7f021-fb72-40b8-841c-8a9410ee8c64.__action_status__","label":"1➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true"}},{"name":"c7a7f021-fb72-40b8-841c-8a9410ee8c64.table_name","label":"1➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c7a7f021-fb72-40b8-841c-8a9410ee8c64.record","label":"1➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"4637874e-e5c9-4b90-aea3-f6eeadcadffb.item.location","label":"2➛Server Record➛Location","reference":"cmn_location","reference_display":"Location","type":"reference","base_type":"reference","parent_table_name":"cmdb_ci_server","column_name":"location"},{"name":"4637874e-e5c9-4b90-aea3-f6eeadcadffb.item.location.country","label":"2➛Server Record➛Location➛Country","reference":"","reference_display":"Country","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"country"},{"name":"4637874e-e5c9-4b90-aea3-f6eeadcadffb.item.sys_id","label":"2➛Server Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"cmdb_ci_server","column_name":"sys_id"},{"name":"4637874e-e5c9-4b90-aea3-f6eeadcadffb.item.name","label":"2➛Server Record➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"cmdb_ci_server","column_name":"name"},{"name":"e0183ab0-9924-4e51-9e09-d9da3364cef5.__status__","label":"3➛Error Status","reference_display":"Error Status","type":"object","base_type":"object","attributes":{"uiType":"object","uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"f28a7252-0c5a-41f5-a929-026db806ddce.__dont_treat_as_error__","label":"3➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"f28a7252-0c5a-41f5-a929-026db806ddce.__action_status__","label":"3➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"f28a7252-0c5a-41f5-a929-026db806ddce.error_message","label":"3➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"f28a7252-0c5a-41f5-a929-026db806ddce.status","label":"3➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"f28a7252-0c5a-41f5-a929-026db806ddce.table_name","label":"3➛Server Carbon Profile Table","reference":"x_312603_server_0_server_carbon_profile","reference_display":"Server Carbon Profile Table","type":"table_name","base_type":"table_name","attributes":{"uiType":"table_name","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"f28a7252-0c5a-41f5-a929-026db806ddce.record","label":"3➛Server Carbon Profile Record","reference":"x_312603_server_0_server_carbon_profile","reference_display":"Server Carbon Profile Record","type":"reference","base_type":"reference","attributes":{"uiType":"document_id","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"4637874e-e5c9-4b90-aea3-f6eeadcadffb.item","label":"2➛Server Record","reference":"cmdb_ci_server","reference_display":"Server Record","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"7355a831-43e3-403c-88b4-66052466da4b.__dont_treat_as_error__","label":"3➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7355a831-43e3-403c-88b4-66052466da4b.__action_status__","label":"3➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7355a831-43e3-403c-88b4-66052466da4b.Count","label":"3➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7355a831-43e3-403c-88b4-66052466da4b.Table","label":"3➛Server Table","reference":"cmdb_ci_server","reference_display":"Server","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7355a831-43e3-403c-88b4-66052466da4b.Records","label":"3➛Server Records","reference":"cmdb_ci_server","reference_display":"Server","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b2a1b3e5-54b4-43a1-b4c7-eba6f35b8b5e.item","label":"1➛Items","reference_display":"Items","type":"document_id","base_type":"document_id","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}}]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <name>Calculate Carbon Profile</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-02 13:46:18</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9c7896c8870fb4108e42caaf8bbb3513</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Calculate Carbon Profile</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Server Carbon Profile" source="x_312603_server_0">3fef618c8787b4108e42caaf8bbb35d9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Server Carbon Profile">3fef618c8787b4108e42caaf8bbb35d9</sys_scope>
+        <sys_update_name>sys_hub_flow_9c7896c8870fb4108e42caaf8bbb3513</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-02 14:34:22</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="DELETE" query="documentkey=9c7896c8870fb4108e42caaf8bbb3513"/>
+    <sys_variable_value action="DELETE" query="document_key=9c7896c8870fb4108e42caaf8bbb3513"/>
+    <sys_hub_trigger_instance action="DELETE" query="flow=9c7896c8870fb4108e42caaf8bbb3513^sys_idNOT IN59c22e00878fb4108e42caaf8bbb3524"/>
+    <sys_hub_trigger_instance action="DELETE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Calculate Carbon Profile">9c7896c8870fb4108e42caaf8bbb3513</flow>
+        <name>Weekly</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-02 14:31:26</sys_created_on>
+        <sys_id>59c22e00878fb4108e42caaf8bbb3524</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-02 14:31:26</sys_updated_on>
+        <trigger_definition display_value="Weekly">cf352104c32222002841b63b12d3ae1f</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>weekly</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="DELETE" query="document_key=59c22e00878fb4108e42caaf8bbb3524"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>59c22e00878fb4108e42caaf8bbb3524</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-02 14:31:26</sys_created_on>
+        <sys_id>91c22e00878fb4108e42caaf8bbb3526</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-02 14:31:26</sys_updated_on>
+        <value>6</value>
+        <variable display_value="Day of Week">c685a104c32222002841b63b12d3aed3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>59c22e00878fb4108e42caaf8bbb3524</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-02 14:31:26</sys_created_on>
+        <sys_id>99c22e00878fb4108e42caaf8bbb3525</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-02 14:31:26</sys_updated_on>
+        <value>1970-01-01 21:00:00</value>
+        <variable display_value="Time">a745a104c32222002841b63b12d3ae18</variable>
+    </sys_variable_value>
+    <sys_flow_cat_variable_model action="DELETE" query="id=9c7896c8870fb4108e42caaf8bbb3513^sys_idNOT IN1c7896c8870fb4108e42caaf8bbb3515"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>9c7896c8870fb4108e42caaf8bbb3513</id>
+        <name>Calculate Carbon Profile</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-02 13:46:18</sys_created_on>
+        <sys_id>1c7896c8870fb4108e42caaf8bbb3515</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-02 13:46:18</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_action_instance action="DELETE" query="flow=9c7896c8870fb4108e42caaf8bbb3513^sys_idNOT IN00ff5e88874fb4108e42caaf8bbb35ed,6eddd284874fb4108e42caaf8bbb35e4"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Calculate Carbon Profile">9c7896c8870fb4108e42caaf8bbb3513</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-02 14:19:03</sys_created_on>
+        <sys_id>00ff5e88874fb4108e42caaf8bbb35ed</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Server Carbon Profile">3fef618c8787b4108e42caaf8bbb35d9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-02 14:31:26</sys_updated_on>
+        <ui_id>92bb842b-1684-418e-97c0-6ccd39a8e31f</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=00ff5e88874fb4108e42caaf8bbb35ed"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>00ff5e88874fb4108e42caaf8bbb35ed</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-02 14:19:03</sys_created_on>
+        <sys_id>4cff5e88874fb4108e42caaf8bbb35ee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-02 14:19:03</sys_updated_on>
+        <value>cmdb_ci_server</value>
+        <variable display_value="Table">8f400a1587003300663ca1bb36cb0b4b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="table=var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b^id=00ff5e88874fb4108e42caaf8bbb35ed"/>
+    <sys_hub_input_scripts action="DELETE" query="instance=00ff5e88874fb4108e42caaf8bbb35ed^sys_idNOT IN00ff5e88874fb4108e42caaf8bbb35ee,04ff5e88874fb4108e42caaf8bbb35ee"/>
+    <sys_hub_input_scripts action="DELETE">
+        <active>false</active>
+        <input_name>table</input_name>
+        <instance>00ff5e88874fb4108e42caaf8bbb35ed</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"table":{"scriptActive":false}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-02 14:19:03</sys_created_on>
+        <sys_id>00ff5e88874fb4108e42caaf8bbb35ee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-02 14:19:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="DELETE">
+        <active>true</active>
+        <input_name>conditions</input_name>
+        <instance>00ff5e88874fb4108e42caaf8bbb35ed</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"conditions":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n**\n**Requires GlideRecord encodedQuery response, example:\n**\"active\u003dtrue^short_descriptionSTARTSWITHtest\";\n*/\n\nreturn \"location\u003d108752c8c611227501d4ab0e392ba97f\""}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-02 14:19:03</sys_created_on>
+        <sys_id>04ff5e88874fb4108e42caaf8bbb35ee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-02 14:19:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create or Update Record">ab575ae253b3230034c6ddeeff7b12f1</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Calculate Carbon Profile">9c7896c8870fb4108e42caaf8bbb3513</flow>
+        <order>3</order>
+        <parent_ui_id>4637874e-e5c9-4b90-aea3-f6eeadcadffb</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-02 14:09:56</sys_created_on>
+        <sys_id>6eddd284874fb4108e42caaf8bbb35e4</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="Server Carbon Profile">3fef618c8787b4108e42caaf8bbb35d9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-02 14:31:26</sys_updated_on>
+        <ui_id>f28a7252-0c5a-41f5-a929-026db806ddce</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=6eddd284874fb4108e42caaf8bbb35e4"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>6eddd284874fb4108e42caaf8bbb35e4</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-02 14:09:56</sys_created_on>
+        <sys_id>a6ddd284874fb4108e42caaf8bbb35e6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-02 14:09:56</sys_updated_on>
+        <value>x_312603_server_0_server_carbon_profile</value>
+        <variable display_value="Table Name">27575ae253b3230034c6ddeeff7b12f4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=6eddd284874fb4108e42caaf8bbb35e4"/>
+    <sys_element_mapping action="DELETE">
+        <field>fields</field>
+        <id>6eddd284874fb4108e42caaf8bbb35e4</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-02 14:09:56</sys_created_on>
+        <sys_id>62ddd284874fb4108e42caaf8bbb35e6</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-02 14:19:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_ab575ae253b3230034c6ddeeff7b12f1</table>
+        <value>server={{4637874e-e5c9-4b90-aea3-f6eeadcadffb.item}}^country={{4637874e-e5c9-4b90-aea3-f6eeadcadffb.item.location.country}}^location={{4637874e-e5c9-4b90-aea3-f6eeadcadffb.item.location}}^sys_id={{4637874e-e5c9-4b90-aea3-f6eeadcadffb.item.sys_id}}^coalesce_fields=sys_id</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>table_name</field>
+        <id>6eddd284874fb4108e42caaf8bbb35e4</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-02 14:09:56</sys_created_on>
+        <sys_id>26ddd284874fb4108e42caaf8bbb35e6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-02 14:09:56</sys_updated_on>
+        <table>var__m_sys_hub_action_input_ab575ae253b3230034c6ddeeff7b12f1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="DELETE" query="flow=9c7896c8870fb4108e42caaf8bbb3513^sys_idNOT INe2ddd284874fb4108e42caaf8bbb35e7,eaddd284874fb4108e42caaf8bbb35dd"/>
+    <sys_hub_flow_logic action="DELETE">
+        <block display_value="">2eddd284874fb4108e42caaf8bbb35e6</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Calculate Carbon Profile">9c7896c8870fb4108e42caaf8bbb3513</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Top Level Catch">35d60003e6022010a5e40cdd1254dd23</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-02 14:09:56</sys_created_on>
+        <sys_id>e2ddd284874fb4108e42caaf8bbb35e7</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Server Carbon Profile">3fef618c8787b4108e42caaf8bbb35d9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-02 14:31:26</sys_updated_on>
+        <ui_id>e0183ab0-9924-4e51-9e09-d9da3364cef5</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="DELETE" query="document_key=e2ddd284874fb4108e42caaf8bbb35e7"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>e2ddd284874fb4108e42caaf8bbb35e7</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-02 14:09:56</sys_created_on>
+        <sys_id>26ddd284874fb4108e42caaf8bbb35ea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-02 14:09:56</sys_updated_on>
+        <value>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"true\",\"hint\":null,\"uiType\":\"integer\",\"default_value\":\"\",\"action_error_output\":\"true\",\"label\":\"Code\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"true\",\"hint\":null,\"uiType\":\"string\",\"default_value\":null,\"action_error_output\":\"true\",\"label\":\"Message\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"read_only\":\"true\",\"hint\":null,\"uiType\":\"object\",\"default_value\":\"\",\"label\":\"Action Status\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\",\"uiUniqueId\":\"8e3eb395-c990-4a7d-b8da-081a1acab7eb\"}"}},"serializationFormat":"JSON","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}}}</value>
+        <variable display_value="Error Status">0f72a5a25b132010b61ea2013781c749</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>e2ddd284874fb4108e42caaf8bbb35e7</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-02 14:09:56</sys_created_on>
+        <sys_id>e6ddd284874fb4108e42caaf8bbb35ea</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-02 14:12:56</sys_updated_on>
+        <value>0</value>
+        <variable display_value="enabled">dd70187cc36e20105553b740ad40dddc</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="table=var__m_sys_hub_flow_variable_9c7896c8870fb4108e42caaf8bbb3513^id=e2ddd284874fb4108e42caaf8bbb35e7"/>
+    <sys_element_mapping action="DELETE" query="table=var__m_sys_hub_flow_logic_input_35d60003e6022010a5e40cdd1254dd23^id=e2ddd284874fb4108e42caaf8bbb35e7"/>
+    <sys_hub_flow_logic action="DELETE">
+        <block display_value="">26ddd284874fb4108e42caaf8bbb35dd</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Calculate Carbon Profile">9c7896c8870fb4108e42caaf8bbb3513</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>92bb842b-1684-418e-97c0-6ccd39a8e31f</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-02 14:09:56</sys_created_on>
+        <sys_id>eaddd284874fb4108e42caaf8bbb35dd</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Server Carbon Profile">3fef618c8787b4108e42caaf8bbb35d9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-02 14:31:26</sys_updated_on>
+        <ui_id>4637874e-e5c9-4b90-aea3-f6eeadcadffb</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="DELETE" query="document_key=eaddd284874fb4108e42caaf8bbb35dd"/>
+    <sys_element_mapping action="DELETE" query="table=var__m_sys_hub_flow_variable_9c7896c8870fb4108e42caaf8bbb3513^id=eaddd284874fb4108e42caaf8bbb35dd"/>
+    <sys_element_mapping action="DELETE" query="id=eaddd284874fb4108e42caaf8bbb35dd"/>
+    <sys_element_mapping action="DELETE">
+        <field>items</field>
+        <id>eaddd284874fb4108e42caaf8bbb35dd</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-02 14:09:56</sys_created_on>
+        <sys_id>e6ddd284874fb4108e42caaf8bbb35e0</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-02 14:19:03</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33</table>
+        <value>{{92bb842b-1684-418e-97c0-6ccd39a8e31f.Records}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_variable action="DELETE" query="model=9c7896c8870fb4108e42caaf8bbb3513^sys_idNOT IN777d9644874fb4108e42caaf8bbb3541,fb7d5644874fb4108e42caaf8bbb35ee"/>
+    <sys_hub_flow_variable action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=9fbbdacc-490d-4018-8b9f-2b953f3c5ac6</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>pue</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>PUE</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Calculate Carbon Profile">9c7896c8870fb4108e42caaf8bbb3513</model>
+        <model_id>9c7896c8870fb4108e42caaf8bbb3513</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_9c7896c8870fb4108e42caaf8bbb3513</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-02 14:08:24</sys_created_on>
+        <sys_id>777d9644874fb4108e42caaf8bbb3541</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PUE</sys_name>
+        <sys_package display_value="Server Carbon Profile" source="x_312603_server_0">3fef618c8787b4108e42caaf8bbb35d9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Server Carbon Profile">3fef618c8787b4108e42caaf8bbb35d9</sys_scope>
+        <sys_update_name>sys_hub_flow_variable_777d9644874fb4108e42caaf8bbb3541</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-02 14:08:24</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=95ff7f4d-7a43-44c1-8301-a3000a198038</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>server_power_consumption</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>Server Power Consumption</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Calculate Carbon Profile">9c7896c8870fb4108e42caaf8bbb3513</model>
+        <model_id>9c7896c8870fb4108e42caaf8bbb3513</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_9c7896c8870fb4108e42caaf8bbb3513</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-02 14:08:23</sys_created_on>
+        <sys_id>fb7d5644874fb4108e42caaf8bbb35ee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Server Power Consumption</sys_name>
+        <sys_package display_value="Server Carbon Profile" source="x_312603_server_0">3fef618c8787b4108e42caaf8bbb35d9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Server Carbon Profile">3fef618c8787b4108e42caaf8bbb35d9</sys_scope>
+        <sys_update_name>sys_hub_flow_variable_fb7d5644874fb4108e42caaf8bbb35ee</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-02 14:08:23</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Server Carbon Profile">3fef618c8787b4108e42caaf8bbb35d9</application>
+        <file_path/>
+        <instance_id>42d3ebe2dbecd3c06578f22ebf9619d3</instance_id>
+        <instance_name>dev51335</instance_name>
+        <name>sys_hub_flow_9c7896c8870fb4108e42caaf8bbb3513</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_hub_flow"&gt;&lt;sys_hub_flow action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;false&lt;/active&gt;&lt;annotation/&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;compiler_build/&gt;&lt;copied_from&gt;9a41b6c2ff12101088e94ee9453bf1a4&lt;/copied_from&gt;&lt;copied_from_name&gt;FlowTemplate_Empty&lt;/copied_from_name&gt;&lt;description/&gt;&lt;internal_name&gt;calculate_carbon_profile&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"92bb842b-1684-418e-97c0-6ccd39a8e31f.__dont_treat_as_error__","label":"1➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"92bb842b-1684-418e-97c0-6ccd39a8e31f.__action_status__","label":"1➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"92bb842b-1684-418e-97c0-6ccd39a8e31f.Count","label":"1➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"92bb842b-1684-418e-97c0-6ccd39a8e31f.Table","label":"1➛Server Table","reference":"cmdb_ci_server","reference_display":"Server Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"92bb842b-1684-418e-97c0-6ccd39a8e31f.Records","label":"1➛Server Records","reference":"cmdb_ci_server","reference_display":"Server Records","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"flow_variable.sitename","label":"Flow Variables➛SiteName","reference":"","reference_display":"","type":"string","base_type":"string","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"30ef4d0f-1338-4e4b-ad4f-754ab076f267"}},{"name":"c7a7f021-fb72-40b8-841c-8a9410ee8c64.__dont_treat_as_error__","label":"1➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true"}},{"name":"c7a7f021-fb72-40b8-841c-8a9410ee8c64.__action_status__","label":"1➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true"}},{"name":"c7a7f021-fb72-40b8-841c-8a9410ee8c64.table_name","label":"1➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c7a7f021-fb72-40b8-841c-8a9410ee8c64.record","label":"1➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"4637874e-e5c9-4b90-aea3-f6eeadcadffb.item.location","label":"2➛Server Record➛Location","reference":"cmn_location","reference_display":"Location","type":"reference","base_type":"reference","parent_table_name":"cmdb_ci_server","column_name":"location"},{"name":"4637874e-e5c9-4b90-aea3-f6eeadcadffb.item.location.country","label":"2➛Server Record➛Location➛Country","reference":"","reference_display":"Country","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"country"},{"name":"4637874e-e5c9-4b90-aea3-f6eeadcadffb.item.sys_id","label":"2➛Server Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"cmdb_ci_server","column_name":"sys_id"},{"name":"4637874e-e5c9-4b90-aea3-f6eeadcadffb.item.name","label":"2➛Server Record➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"cmdb_ci_server","column_name":"name"},{"name":"e0183ab0-9924-4e51-9e09-d9da3364cef5.__status__","label":"3➛Error Status","reference_display":"Error Status","type":"object","base_type":"object","attributes":{"uiType":"object","uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"f28a7252-0c5a-41f5-a929-026db806ddce.__dont_treat_as_error__","label":"3➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"f28a7252-0c5a-41f5-a929-026db806ddce.__action_status__","label":"3➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"f28a7252-0c5a-41f5-a929-026db806ddce.error_message","label":"3➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"f28a7252-0c5a-41f5-a929-026db806ddce.status","label":"3➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"f28a7252-0c5a-41f5-a929-026db806ddce.table_name","label":"3➛Server Carbon Profile Table","reference":"x_312603_server_0_server_carbon_profile","reference_display":"Server Carbon Profile Table","type":"table_name","base_type":"table_name","attributes":{"uiType":"table_name","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"f28a7252-0c5a-41f5-a929-026db806ddce.record","label":"3➛Server Carbon Profile Record","reference":"x_312603_server_0_server_carbon_profile","reference_display":"Server Carbon Profile Record","type":"reference","base_type":"reference","attributes":{"uiType":"document_id","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"4637874e-e5c9-4b90-aea3-f6eeadcadffb.item","label":"2➛Server Record","reference":"cmdb_ci_server","reference_display":"Server Record","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"7355a831-43e3-403c-88b4-66052466da4b.__dont_treat_as_error__","label":"3➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7355a831-43e3-403c-88b4-66052466da4b.__action_status__","label":"3➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7355a831-43e3-403c-88b4-66052466da4b.Count","label":"3➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7355a831-43e3-403c-88b4-66052466da4b.Table","label":"3➛Server Table","reference":"cmdb_ci_server","reference_display":"Server","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7355a831-43e3-403c-88b4-66052466da4b.Records","label":"3➛Server Records","reference":"cmdb_ci_server","reference_display":"Server","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b2a1b3e5-54b4-43a1-b4c7-eba6f35b8b5e.item","label":"1➛Items","reference_display":"Items","type":"document_id","base_type":"document_id","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}}]&lt;/label_cache&gt;&lt;latest_snapshot/&gt;&lt;master_snapshot/&gt;&lt;name&gt;Calculate Carbon Profile&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;system&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;show_draft_actions&gt;false&lt;/show_draft_actions&gt;&lt;show_triggered_flows&gt;false&lt;/show_triggered_flows&gt;&lt;status&gt;draft&lt;/status&gt;&lt;sys_class_name&gt;sys_hub_flow&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-10-02 13:46:18&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;9c7896c8870fb4108e42caaf8bbb3513&lt;/sys_id&gt;&lt;sys_mod_count&gt;8&lt;/sys_mod_count&gt;&lt;sys_name&gt;Calculate Carbon Profile&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Server Carbon Profile" source="x_312603_server_0"&gt;3fef618c8787b4108e42caaf8bbb35d9&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Server Carbon Profile"&gt;3fef618c8787b4108e42caaf8bbb35d9&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_hub_flow_9c7896c8870fb4108e42caaf8bbb3513&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-10-02 14:34:22&lt;/sys_updated_on&gt;&lt;type&gt;flow&lt;/type&gt;&lt;/sys_hub_flow&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=9c7896c8870fb4108e42caaf8bbb3513"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=9c7896c8870fb4108e42caaf8bbb3513"/&gt;&lt;sys_hub_trigger_instance action="delete_multiple" query="flow=9c7896c8870fb4108e42caaf8bbb3513^sys_idNOT IN59c22e00878fb4108e42caaf8bbb3524"/&gt;&lt;sys_hub_trigger_instance action="INSERT_OR_UPDATE"&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Calculate Carbon Profile"&gt;9c7896c8870fb4108e42caaf8bbb3513&lt;/flow&gt;&lt;name&gt;Weekly&lt;/name&gt;&lt;remote_sys_id/&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-10-02 14:31:26&lt;/sys_created_on&gt;&lt;sys_id&gt;59c22e00878fb4108e42caaf8bbb3524&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-10-02 14:31:26&lt;/sys_updated_on&gt;&lt;trigger_definition display_value="Weekly"&gt;cf352104c32222002841b63b12d3ae1f&lt;/trigger_definition&gt;&lt;trigger_inputs/&gt;&lt;trigger_outputs/&gt;&lt;trigger_type&gt;weekly&lt;/trigger_type&gt;&lt;/sys_hub_trigger_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=59c22e00878fb4108e42caaf8bbb3524"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_trigger_instance&lt;/document&gt;&lt;document_key&gt;59c22e00878fb4108e42caaf8bbb3524&lt;/document_key&gt;&lt;order&gt;10&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-10-02 14:31:26&lt;/sys_created_on&gt;&lt;sys_id&gt;91c22e00878fb4108e42caaf8bbb3526&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-10-02 14:31:26&lt;/sys_updated_on&gt;&lt;value&gt;6&lt;/value&gt;&lt;variable display_value="Day of Week"&gt;c685a104c32222002841b63b12d3aed3&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_trigger_instance&lt;/document&gt;&lt;document_key&gt;59c22e00878fb4108e42caaf8bbb3524&lt;/document_key&gt;&lt;order&gt;100&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-10-02 14:31:26&lt;/sys_created_on&gt;&lt;sys_id&gt;99c22e00878fb4108e42caaf8bbb3525&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-10-02 14:31:26&lt;/sys_updated_on&gt;&lt;value&gt;1970-01-01 21:00:00&lt;/value&gt;&lt;variable display_value="Time"&gt;a745a104c32222002841b63b12d3ae18&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=9c7896c8870fb4108e42caaf8bbb3513^sys_idNOT IN1c7896c8870fb4108e42caaf8bbb3515"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;9c7896c8870fb4108e42caaf8bbb3513&lt;/id&gt;&lt;name&gt;Calculate Carbon Profile&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-10-02 13:46:18&lt;/sys_created_on&gt;&lt;sys_id&gt;1c7896c8870fb4108e42caaf8bbb3515&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-10-02 13:46:18&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_hub_action_instance action="delete_multiple" query="flow=9c7896c8870fb4108e42caaf8bbb3513^sys_idNOT IN00ff5e88874fb4108e42caaf8bbb35ed,6eddd284874fb4108e42caaf8bbb35e4"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Look Up Records"&gt;43400a1587003300663ca1bb36cb0b4b&lt;/action_type&gt;&lt;action_type_parent/&gt;&lt;comment/&gt;&lt;compiled_snapshot/&gt;&lt;display_text/&gt;&lt;flow display_value="Calculate Carbon Profile"&gt;9c7896c8870fb4108e42caaf8bbb3513&lt;/flow&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-10-02 14:19:03&lt;/sys_created_on&gt;&lt;sys_id&gt;00ff5e88874fb4108e42caaf8bbb35ed&lt;/sys_id&gt;&lt;sys_mod_count&gt;6&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Server Carbon Profile"&gt;3fef618c8787b4108e42caaf8bbb35d9&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-10-02 14:31:26&lt;/sys_updated_on&gt;&lt;ui_id&gt;92bb842b-1684-418e-97c0-6ccd39a8e31f&lt;/ui_id&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=00ff5e88874fb4108e42caaf8bbb35ed"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;00ff5e88874fb4108e42caaf8bbb35ed&lt;/document_key&gt;&lt;order&gt;0&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-10-02 14:19:03&lt;/sys_created_on&gt;&lt;sys_id&gt;4cff5e88874fb4108e42caaf8bbb35ee&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-10-02 14:19:03&lt;/sys_updated_on&gt;&lt;value&gt;cmdb_ci_server&lt;/value&gt;&lt;variable display_value="Table"&gt;8f400a1587003300663ca1bb36cb0b4b&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b^id=00ff5e88874fb4108e42caaf8bbb35ed"/&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=00ff5e88874fb4108e42caaf8bbb35ed^sys_idNOT IN00ff5e88874fb4108e42caaf8bbb35ee,04ff5e88874fb4108e42caaf8bbb35ee"/&gt;&lt;sys_hub_input_scripts action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;input_name&gt;table&lt;/input_name&gt;&lt;instance&gt;00ff5e88874fb4108e42caaf8bbb35ed&lt;/instance&gt;&lt;referenced_table&gt;sys_hub_action_instance&lt;/referenced_table&gt;&lt;script&gt;{"table":{"scriptActive":false}}&lt;/script&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-10-02 14:19:03&lt;/sys_created_on&gt;&lt;sys_id&gt;00ff5e88874fb4108e42caaf8bbb35ee&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-10-02 14:19:03&lt;/sys_updated_on&gt;&lt;/sys_hub_input_scripts&gt;&lt;sys_hub_input_scripts action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;input_name&gt;conditions&lt;/input_name&gt;&lt;instance&gt;00ff5e88874fb4108e42caaf8bbb35ed&lt;/instance&gt;&lt;referenced_table&gt;sys_hub_action_instance&lt;/referenced_table&gt;&lt;script&gt;{"conditions":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n**\n**Requires GlideRecord encodedQuery response, example:\n**\"active\u003dtrue^short_descriptionSTARTSWITHtest\";\n*/\n\nreturn \"location\u003d108752c8c611227501d4ab0e392ba97f\""}}&lt;/script&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-10-02 14:19:03&lt;/sys_created_on&gt;&lt;sys_id&gt;04ff5e88874fb4108e42caaf8bbb35ee&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-10-02 14:19:03&lt;/sys_updated_on&gt;&lt;/sys_hub_input_scripts&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Create or Update Record"&gt;ab575ae253b3230034c6ddeeff7b12f1&lt;/action_type&gt;&lt;action_type_parent/&gt;&lt;comment/&gt;&lt;compiled_snapshot/&gt;&lt;display_text/&gt;&lt;flow display_value="Calculate Carbon Profile"&gt;9c7896c8870fb4108e42caaf8bbb3513&lt;/flow&gt;&lt;order&gt;3&lt;/order&gt;&lt;parent_ui_id&gt;4637874e-e5c9-4b90-aea3-f6eeadcadffb&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-10-02 14:09:56&lt;/sys_created_on&gt;&lt;sys_id&gt;6eddd284874fb4108e42caaf8bbb35e4&lt;/sys_id&gt;&lt;sys_mod_count&gt;10&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Server Carbon Profile"&gt;3fef618c8787b4108e42caaf8bbb35d9&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-10-02 14:31:26&lt;/sys_updated_on&gt;&lt;ui_id&gt;f28a7252-0c5a-41f5-a929-026db806ddce&lt;/ui_id&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=6eddd284874fb4108e42caaf8bbb35e4"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;6eddd284874fb4108e42caaf8bbb35e4&lt;/document_key&gt;&lt;order&gt;0&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-10-02 14:09:56&lt;/sys_created_on&gt;&lt;sys_id&gt;a6ddd284874fb4108e42caaf8bbb35e6&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-10-02 14:09:56&lt;/sys_updated_on&gt;&lt;value&gt;x_312603_server_0_server_carbon_profile&lt;/value&gt;&lt;variable display_value="Table Name"&gt;27575ae253b3230034c6ddeeff7b12f4&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=6eddd284874fb4108e42caaf8bbb35e4"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;fields&lt;/field&gt;&lt;id&gt;6eddd284874fb4108e42caaf8bbb35e4&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-10-02 14:09:56&lt;/sys_created_on&gt;&lt;sys_id&gt;62ddd284874fb4108e42caaf8bbb35e6&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-10-02 14:19:03&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_ab575ae253b3230034c6ddeeff7b12f1&lt;/table&gt;&lt;value&gt;server={{4637874e-e5c9-4b90-aea3-f6eeadcadffb.item}}^country={{4637874e-e5c9-4b90-aea3-f6eeadcadffb.item.location.country}}^location={{4637874e-e5c9-4b90-aea3-f6eeadcadffb.item.location}}^sys_id={{4637874e-e5c9-4b90-aea3-f6eeadcadffb.item.sys_id}}^coalesce_fields=sys_id&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;table_name&lt;/field&gt;&lt;id&gt;6eddd284874fb4108e42caaf8bbb35e4&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-10-02 14:09:56&lt;/sys_created_on&gt;&lt;sys_id&gt;26ddd284874fb4108e42caaf8bbb35e6&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-10-02 14:09:56&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_ab575ae253b3230034c6ddeeff7b12f1&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_flow_logic action="delete_multiple" query="flow=9c7896c8870fb4108e42caaf8bbb3513^sys_idNOT INe2ddd284874fb4108e42caaf8bbb35e7,eaddd284874fb4108e42caaf8bbb35dd"/&gt;&lt;sys_hub_flow_logic action="INSERT_OR_UPDATE"&gt;&lt;block display_value=""&gt;2eddd284874fb4108e42caaf8bbb35e6&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;decision_table_inputs/&gt;&lt;display_text/&gt;&lt;extended_inputs/&gt;&lt;flow display_value="Calculate Carbon Profile"&gt;9c7896c8870fb4108e42caaf8bbb3513&lt;/flow&gt;&lt;flow_variable/&gt;&lt;flow_variables_assigned/&gt;&lt;inputs/&gt;&lt;logic_definition display_value="Top Level Catch"&gt;35d60003e6022010a5e40cdd1254dd23&lt;/logic_definition&gt;&lt;order&gt;4&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;outputs_to_assign/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-10-02 14:09:56&lt;/sys_created_on&gt;&lt;sys_id&gt;e2ddd284874fb4108e42caaf8bbb35e7&lt;/sys_id&gt;&lt;sys_mod_count&gt;6&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Server Carbon Profile"&gt;3fef618c8787b4108e42caaf8bbb35d9&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-10-02 14:31:26&lt;/sys_updated_on&gt;&lt;ui_id&gt;e0183ab0-9924-4e51-9e09-d9da3364cef5&lt;/ui_id&gt;&lt;workflow_inputs/&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=e2ddd284874fb4108e42caaf8bbb35e7"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_flow_logic&lt;/document&gt;&lt;document_key&gt;e2ddd284874fb4108e42caaf8bbb35e7&lt;/document_key&gt;&lt;order&gt;100&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-10-02 14:09:56&lt;/sys_created_on&gt;&lt;sys_id&gt;26ddd284874fb4108e42caaf8bbb35ea&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-10-02 14:09:56&lt;/sys_updated_on&gt;&lt;value&gt;{"version":"1.0","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"true\",\"hint\":null,\"uiType\":\"integer\",\"default_value\":\"\",\"action_error_output\":\"true\",\"label\":\"Code\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"true\",\"hint\":null,\"uiType\":\"string\",\"default_value\":null,\"action_error_output\":\"true\",\"label\":\"Message\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"read_only\":\"true\",\"hint\":null,\"uiType\":\"object\",\"default_value\":\"\",\"label\":\"Action Status\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\",\"uiUniqueId\":\"8e3eb395-c990-4a7d-b8da-081a1acab7eb\"}"}},"serializationFormat":"JSON","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}}}&lt;/value&gt;&lt;variable display_value="Error Status"&gt;0f72a5a25b132010b61ea2013781c749&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_flow_logic&lt;/document&gt;&lt;document_key&gt;e2ddd284874fb4108e42caaf8bbb35e7&lt;/document_key&gt;&lt;order&gt;100&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-10-02 14:09:56&lt;/sys_created_on&gt;&lt;sys_id&gt;e6ddd284874fb4108e42caaf8bbb35ea&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-10-02 14:12:56&lt;/sys_updated_on&gt;&lt;value&gt;0&lt;/value&gt;&lt;variable display_value="enabled"&gt;dd70187cc36e20105553b740ad40dddc&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_9c7896c8870fb4108e42caaf8bbb3513^id=e2ddd284874fb4108e42caaf8bbb35e7"/&gt;&lt;sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_logic_input_35d60003e6022010a5e40cdd1254dd23^id=e2ddd284874fb4108e42caaf8bbb35e7"/&gt;&lt;sys_hub_flow_logic action="INSERT_OR_UPDATE"&gt;&lt;block display_value=""&gt;26ddd284874fb4108e42caaf8bbb35dd&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;decision_table_inputs/&gt;&lt;display_text/&gt;&lt;extended_inputs/&gt;&lt;flow display_value="Calculate Carbon Profile"&gt;9c7896c8870fb4108e42caaf8bbb3513&lt;/flow&gt;&lt;flow_variable/&gt;&lt;flow_variables_assigned/&gt;&lt;inputs/&gt;&lt;inputs/&gt;&lt;logic_definition display_value="For Each"&gt;098e1dc5c3e232002841b63b12d3ae33&lt;/logic_definition&gt;&lt;order&gt;2&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;outputs_to_assign/&gt;&lt;parent_ui_id&gt;92bb842b-1684-418e-97c0-6ccd39a8e31f&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_flow_logic&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-10-02 14:09:56&lt;/sys_created_on&gt;&lt;sys_id&gt;eaddd284874fb4108e42caaf8bbb35dd&lt;/sys_id&gt;&lt;sys_mod_count&gt;6&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Server Carbon Profile"&gt;3fef618c8787b4108e42caaf8bbb35d9&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-10-02 14:31:26&lt;/sys_updated_on&gt;&lt;ui_id&gt;4637874e-e5c9-4b90-aea3-f6eeadcadffb&lt;/ui_id&gt;&lt;workflow_inputs/&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=eaddd284874fb4108e42caaf8bbb35dd"/&gt;&lt;sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_9c7896c8870fb4108e42caaf8bbb3513^id=eaddd284874fb4108e42caaf8bbb35dd"/&gt;&lt;sys_element_mapping action="delete_multiple" query="id=eaddd284874fb4108e42caaf8bbb35dd"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;items&lt;/field&gt;&lt;id&gt;eaddd284874fb4108e42caaf8bbb35dd&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-10-02 14:09:56&lt;/sys_created_on&gt;&lt;sys_id&gt;e6ddd284874fb4108e42caaf8bbb35e0&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-10-02 14:19:03&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33&lt;/table&gt;&lt;value&gt;{{92bb842b-1684-418e-97c0-6ccd39a8e31f.Records}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=9c7896c8870fb4108e42caaf8bbb3513^sys_idNOT IN777d9644874fb4108e42caaf8bbb3541,fb7d5644874fb4108e42caaf8bbb35ee"/&gt;&lt;sys_hub_flow_variable action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=9fbbdacc-490d-4018-8b9f-2b953f3c5ac6&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;pue&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Integer"&gt;integer&lt;/internal_type&gt;&lt;label&gt;PUE&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;40&lt;/max_length&gt;&lt;model display_value="Calculate Carbon Profile"&gt;9c7896c8870fb4108e42caaf8bbb3513&lt;/model&gt;&lt;model_id&gt;9c7896c8870fb4108e42caaf8bbb3513&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_variable_9c7896c8870fb4108e42caaf8bbb3513&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;0&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_variable&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-10-02 14:08:24&lt;/sys_created_on&gt;&lt;sys_id&gt;777d9644874fb4108e42caaf8bbb3541&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;PUE&lt;/sys_name&gt;&lt;sys_package display_value="Server Carbon Profile" source="x_312603_server_0"&gt;3fef618c8787b4108e42caaf8bbb35d9&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Server Carbon Profile"&gt;3fef618c8787b4108e42caaf8bbb35d9&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_hub_flow_variable_777d9644874fb4108e42caaf8bbb3541&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-10-02 14:08:24&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_variable&gt;&lt;sys_hub_flow_variable action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=95ff7f4d-7a43-44c1-8301-a3000a198038&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;server_power_consumption&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Integer"&gt;integer&lt;/internal_type&gt;&lt;label&gt;Server Power Consumption&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;40&lt;/max_length&gt;&lt;model display_value="Calculate Carbon Profile"&gt;9c7896c8870fb4108e42caaf8bbb3513&lt;/model&gt;&lt;model_id&gt;9c7896c8870fb4108e42caaf8bbb3513&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_variable_9c7896c8870fb4108e42caaf8bbb3513&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;0&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_variable&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-10-02 14:08:23&lt;/sys_created_on&gt;&lt;sys_id&gt;fb7d5644874fb4108e42caaf8bbb35ee&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Server Power Consumption&lt;/sys_name&gt;&lt;sys_package display_value="Server Carbon Profile" source="x_312603_server_0"&gt;3fef618c8787b4108e42caaf8bbb35d9&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Server Carbon Profile"&gt;3fef618c8787b4108e42caaf8bbb35d9&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_hub_flow_variable_fb7d5644874fb4108e42caaf8bbb35ee&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-10-02 14:08:23&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_variable&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1535601204</payload_hash>
+        <record_name>Calculate Carbon Profile</record_name>
+        <reverted_from/>
+        <source>88ff618c8787b4108e42caaf8bbb35dc</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-02 14:34:23</sys_created_on>
+        <sys_id>a8732680878fb4108e42caaf8bbb351f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17c416d6fc10000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-02 14:34:23</sys_updated_on>
+        <type>Flow</type>
+        <update_guid>ec732680588fb41074552ddd50f9f21e</update_guid>
+        <update_guid_history>ec732680588fb41074552ddd50f9f21e:-1535601204,65c22e00298fb410bfcbba734412106c:-1010451746,9610a6c8e84fb410a40d7da1b40bb129:-962443339,10ff9e88704fb410b883151daa69172c:1118287654,228e5ec4444fb4108e5b16b4b145107f:284738548,fadd1684f04fb410f3e34da5e9e54c10:-1395601433,687896c8da0fb4107c187a18657cf22c:-1551391033,1c7896c8f80fb4101411ebef9eece319:-1024431197</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-02 17:03:04</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_flow">sys_hub_flow</sys_db_object>
+        <sys_id>1e8efd4bcb2c4e46a78ed5df9267df19</sys_id>
+        <sys_metadata>9c7896c8870fb4108e42caaf8bbb3513</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Calculate Carbon Profile</sys_name>
+        <sys_package display_value="Server Carbon Profile" source="x_312603_server_0">3fef618c8787b4108e42caaf8bbb35d9</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Server Carbon Profile">3fef618c8787b4108e42caaf8bbb35d9</sys_scope>
+        <sys_scope_delete display_value="">216d176646f345189b96d22dbc8b5e40</sys_scope_delete>
+        <sys_update_name>sys_hub_flow_9c7896c8870fb4108e42caaf8bbb3513</sys_update_name>
+        <sys_update_version display_value="sys_hub_flow_9c7896c8870fb4108e42caaf8bbb3513">a8732680878fb4108e42caaf8bbb351f</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-02 17:03:04</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

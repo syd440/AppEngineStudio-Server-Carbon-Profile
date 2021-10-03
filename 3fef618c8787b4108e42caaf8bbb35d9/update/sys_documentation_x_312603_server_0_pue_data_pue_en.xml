@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="pue" label="PUE" language="en" table="x_312603_server_0_pue_data">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>pue</element>
+            <help/>
+            <hint/>
+            <label>PUE</label>
+            <language>en</language>
+            <name>x_312603_server_0_pue_data</name>
+            <plural>PUEs</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-10-02 12:17:51</sys_created_on>
+            <sys_id>ec340284874bb4108e42caaf8bbb351b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>PUE</sys_name>
+            <sys_package display_value="Server Carbon Profile" source="x_312603_server_0">3fef618c8787b4108e42caaf8bbb35d9</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Server Carbon Profile">3fef618c8787b4108e42caaf8bbb35d9</sys_scope>
+            <sys_update_name>sys_documentation_x_312603_server_0_pue_data_pue_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-10-02 12:17:51</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_theme_m2m_asset">
+    <sys_ux_theme_m2m_asset action="INSERT_OR_UPDATE">
+        <asset display_value="server-carbon-footprint">eeb99f004a47f4104993e75e1b79cda3</asset>
+        <properties>{&#13;
+"position": "header_logo"&#13;
+}</properties>
+        <sys_class_name>sys_ux_theme_m2m_asset</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2021-10-02 18:31:36</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>26b99f00db47f41056e0451f143921a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Server Carbon Profile" source="x_312603_server_0">3fef618c8787b4108e42caaf8bbb35d9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Server Carbon Profile">3fef618c8787b4108e42caaf8bbb35d9</sys_scope>
+        <sys_update_name>sys_ux_theme_m2m_asset_26b99f00db47f41056e0451f143921a4</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2021-10-02 18:31:36</sys_updated_on>
+        <theme display_value="Light Theme">6eb99f005847f41093d354a2609ee695</theme>
+    </sys_ux_theme_m2m_asset>
+</record_update>

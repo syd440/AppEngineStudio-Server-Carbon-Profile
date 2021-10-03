@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_event">
+    <sys_ux_event action="INSERT_OR_UPDATE">
+        <description/>
+        <event_name>GLIDE_FORM_1_SAVE_RELAY_62b99f005947f410036301c52850a4a0</event_name>
+        <interfaces/>
+        <label>Glide Form 1 SAVE Relay (Tasks Default)</label>
+        <props>[]</props>
+        <required_translations/>
+        <schema_version>1.0.0</schema_version>
+        <sys_class_name>sys_ux_event</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2021-10-02 18:31:37</sys_created_on>
+        <sys_id>a2b99f003047f4101600b0689f5142a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Glide Form 1 SAVE Relay (Tasks Default)</sys_name>
+        <sys_package display_value="Server Carbon Profile" source="x_312603_server_0">3fef618c8787b4108e42caaf8bbb35d9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Server Carbon Profile">3fef618c8787b4108e42caaf8bbb35d9</sys_scope>
+        <sys_update_name>sys_ux_event_a2b99f003047f4101600b0689f5142a0</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2021-10-02 18:31:37</sys_updated_on>
+    </sys_ux_event>
+</record_update>

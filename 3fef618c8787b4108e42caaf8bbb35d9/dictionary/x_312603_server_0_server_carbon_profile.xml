@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Server Carbon Profile" max_length="40" name="x_312603_server_0_server_carbon_profile" type="collection">
+        <element label="Carbon footprint" max_length="40" name="carbon_footprint" type="float"/>
+        <element label="Correlation_id" max_length="40" name="correlation_id" type="string"/>
+        <element label="Country" max_length="32" name="country" type="string"/>
+        <element label="Location" max_length="32" name="location" reference="cmn_location" type="reference"/>
+        <element display="true" label="Server" max_length="32" name="server" reference="cmdb_ci_server" type="reference"/>
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <index name="index">
+            <element name="country"/>
+        </index>
+        <index name="index2">
+            <element name="server"/>
+        </index>
+        <index name="index3">
+            <element name="location"/>
+        </index>
+        <index name="index4">
+            <element name="sys_class_name"/>
+        </index>
+    </element>
+</database>

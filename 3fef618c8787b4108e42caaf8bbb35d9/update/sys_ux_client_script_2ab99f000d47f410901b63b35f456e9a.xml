@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <includes/>
+        <macroponent display_value="Search Page">aab99f005147f410c97c9c25a96f5b99</macroponent>
+        <name>set_loading</name>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[function handler({api, event, imports}) {
+	// Called on successful retrieval of search data
+    api.setState('loading', false);
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2021-10-02 18:31:35</sys_created_on>
+        <sys_id>2ab99f000d47f410901b63b35f456e9a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>set_loading</sys_name>
+        <sys_package display_value="Server Carbon Profile" source="x_312603_server_0">3fef618c8787b4108e42caaf8bbb35d9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Server Carbon Profile">3fef618c8787b4108e42caaf8bbb35d9</sys_scope>
+        <sys_update_name>sys_ux_client_script_2ab99f000d47f410901b63b35f456e9a</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2021-10-02 18:31:35</sys_updated_on>
+    </sys_ux_client_script>
+</record_update>

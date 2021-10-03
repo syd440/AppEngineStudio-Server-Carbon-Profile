@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Country-specific Emissions Factors" max_length="40" name="x_312603_server_0_country_specific_emissions_factors" type="collection">
+        <element label="CO2 emission" max_length="40" name="co2_emission" type="float"/>
+        <element display="true" label="Country" max_length="32" name="country" reference="core_country" type="reference"/>
+        <index name="index">
+            <element name="country"/>
+        </index>
+    </element>
+</database>
